@@ -15,10 +15,10 @@ import downloadIcon from '../public/static/icons/download.json'
 
 export async function getStaticProps() {
   const meta = {
-    title: 'About // Zeno Rocha',
+    title: 'Tesseract // about',
     description:
       "Zeno Rocha is a Brazilian creator and programmer. He currently lives in San Francisco, California, where he's the Founder & CEO at Resend. His lifelong appreciation for building software and sharing knowledge led him to speak in over 110 conferences worldwide. His passion for open source put him on the top 20 most active users on GitHub at age 22. Before moving to the US, Zeno developed multiple applications, mentored startups, and worked at major companies in Latin America, such as Globo and Petrobras.",
-    tagline: 'Create. Share. Repeat.',
+    tagline: 'Beyond Chat. Enterprise Autonomy.',
     image: '/static/images/about-bw.jpg',
     primaryColor: 'pink',
     secondaryColor: 'purple',
@@ -40,8 +40,8 @@ function About(props) {
       <Container>
         <Section>
           <Image
-            alt="Zeno"
-            src="/static/images/avatar.jpg"
+            alt="Tesseract"
+            src=""
             width="336"
             height="336"
             placeholder="blur"
@@ -56,9 +56,9 @@ function About(props) {
               '@bp2': { marginTop: '-6px' },
             }}
           >
-            <strong>Hey, I'm Zeno Rocha</strong>
-            <Pronunciation />
-            I started as a software engineer back in 2009, working with Flash.
+            <strong>Hey, I'm Zeno Rocha </strong>
+            
+             I started as a software engineer back in 2009, working with Flash.
           </Paragraph>
           <Paragraph>
             I'm the <strong>Founder & CEO</strong> at

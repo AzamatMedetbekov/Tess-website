@@ -68,16 +68,7 @@ export default function CommandBar(props) {
       perform: () => router.push('/contact'),
       icon: <Lottie lottieRef={emailRef} style={iconSize} animationData={emailIcon} loop={false} autoplay={false} />,
     },
-    {
-      id: 'source',
-      name: 'View Source',
-      shortcut: ['s'],
-      keywords: 'view-source',
-      section: 'General',
-      perform: () =>
-        window.open('https://github.com/zenorocha/zenorocha.com', '_blank'),
-      icon: <Lottie lottieRef={sourceRef} style={iconSize} animationData={sourceIcon} loop={false} autoplay={false} />,
-    },
+    
     {
       id: 'home',
       name: 'Home',
@@ -89,16 +80,16 @@ export default function CommandBar(props) {
     },
     {
       id: 'about',
-      name: 'About',
+      name: 'AIP',
       shortcut: ['g', 'a'],
       keywords: 'go-about',
       section: 'Go To',
       perform: () => router.push('/about'),
-      icon: <Lottie lottieRef={aboutRef} style={iconSize} animationData={aboutIcon} loop={false} autoplay={false} />,
+      icon: <Lottie lottieRef={sourceRef} style={iconSize} animationData={sourceIcon} loop={false} autoplay={false} />,
     },
     {
-      id: 'articles',
-      name: 'Articles',
+      id: 'Articles',
+      name: 'Foundry',
       shortcut: ['g', 'b'],
       keywords: 'go-articles',
       section: 'Go To',
@@ -107,7 +98,7 @@ export default function CommandBar(props) {
     },
     {
       id: 'projects',
-      name: 'Projects',
+      name: 'Gotham',
       shortcut: ['g', 'p'],
       keywords: 'go-projects',
       section: 'Go To',
@@ -116,7 +107,7 @@ export default function CommandBar(props) {
     },
     {
       id: 'talks',
-      name: 'Talks',
+      name: 'Apollo',
       shortcut: ['g', 't'],
       keywords: 'go-talks',
       section: 'Go To',
@@ -134,7 +125,7 @@ export default function CommandBar(props) {
     },
     {
       id: 'investing',
-      name: 'Investing',
+      name: 'Tess For Developers',
       shortcut: ['g', 'i'],
       keywords: 'go-investing',
       section: 'Go To',
@@ -143,7 +134,7 @@ export default function CommandBar(props) {
     },
     {
       id: 'uses',
-      name: 'Uses',
+      name: 'Tess For Startups',
       shortcut: ['g', 'u'],
       keywords: 'go-uses',
       section: 'Go To',

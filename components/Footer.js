@@ -10,22 +10,22 @@ export default function Footer() {
     },
     {
       title: 'Twitter',
-      url: 'https://twitter.com/zenorocha',
+      url: '',
       icon: 'ri-twitter-line',
     },
     {
       title: 'GitHub',
-      url: 'https://github.com/zenorocha',
+      url: '',
       icon: 'ri-github-line',
     },
     {
       title: 'linkedin',
-      url: 'https://linkedin.com/in/zenorocha',
+      url: 'https://www.linkedin.com/company/tesseract-inc/',
       icon: 'ri-linkedin-line',
     },
     {
       title: 'Instagram',
-      url: 'https://instagram.com/zenorocha',
+      url: 'https://www.instagram.com/tesseract_tech?igsh=dGluODY3eWRvNWsy',
       icon: 'ri-instagram-line',
     },
   ]

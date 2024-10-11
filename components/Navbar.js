@@ -8,15 +8,14 @@ import { useKBar } from 'kbar'
 export default function Navbar() {
   const router = useRouter()
   const pages = [
-    'About',
-    'Articles',
-    'Projects',
-    'Talks',
-    'Podcasts',
-    'Investing',
-    'Uses',
-    'Reminder',
-  ]
+  { name: '/  AIP', path: '/about' },
+  { name: '/  Foundry', path: '/articles' },
+  { name: '/  Gotham', path: '/projects' },
+  { name: '/  Apollo', path: '/talks' },
+  { name: '/  Podcasts', path: '/podcasts' },
+  { name: '/  Tess For Developers', path: '/investing' },
+  { name: '/  Tess For Startups', path: '/uses' },
+]; 
   const [hovered, setHovered] = useState('')
   const { query } = useKBar()
 
@@ -29,41 +28,42 @@ export default function Navbar() {
 
         <Nav>
           <List>
-            {pages.map(page => {
-              const path = `/${page.toLowerCase()}`
-              const isHovered = hovered === page
+          {pages.map(page => {
+  // No need to use .toLowerCase(), just reference page.path directly
+  const path = page.path;
+  const isHovered = hovered === page.name;
 
-              return (
-                <li key={page}>
-                  <Link href={path} passHref>
-                    <Anchor>
-                      <NavContainer
-                        onHoverStart={() => setHovered(page)}
-                        onHoverEnd={() => setHovered('')}
-                        css={
-                          router.pathname == path
-                            ? {
-                                color: '$primary',
-                                '&::after': { opacity: 1 },
-                              }
-                            : ''
-                        }
-                      >
-                        {isHovered && (
-                          <NavHovered
-                            layoutId="nav"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                          />
-                        )}
-                        {page}
-                      </NavContainer>
-                    </Anchor>
-                  </Link>
-                </li>
-              )
-            })}
+  return (
+    <li key={page.name}>
+      <Link href={path} passHref>
+        <Anchor>
+          <NavContainer
+            onHoverStart={() => setHovered(page.name)}
+            onHoverEnd={() => setHovered('')}
+            css={
+              router.pathname == path
+                ? {
+                    color: '$primary',
+                    '&::after': { opacity: 1 },
+                  }
+                : ''
+            }
+          >
+            {isHovered && (
+              <NavHovered
+                layoutId="nav"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              />
+            )}
+            {page.name}
+          </NavContainer>
+        </Anchor>
+      </Link>
+    </li>
+  );
+})}
           </List>
         </Nav>
 
